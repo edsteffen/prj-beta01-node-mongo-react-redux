@@ -17,3 +17,5 @@ server.listen(port, function () {
     |________________________________|
     `);
 })
+
+module.exports = server
