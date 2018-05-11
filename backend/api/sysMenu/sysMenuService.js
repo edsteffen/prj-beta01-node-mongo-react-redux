@@ -14,20 +14,4 @@ SysMenu.route('count', (req, res, next) => {
     })
 })
 
-SysMenu.route('summary', (req, res, next) => {
-    SysMenu.aggregate({
-        $project: {
-            item: 1,
-            numDeSubmenus: { $size: "$submens" }
-        }
-    }, (error, result) => {
-            if (error) {
-                res.status(500).json({ errors: [error] })
-            } else {
-                res.json(result || { numDeSubmenus: 0 })
-            }
-        })
-})
-
-
 module.exports = SysMenu
