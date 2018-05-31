@@ -1,7 +1,9 @@
 import React from 'react'
 
+import Menu from '../sysMenu/sysMenuList'
+
 export default props => (
     <div className='wrapper'>
-        <h1>App</h1>
+        <Menu />
     </div>
 )
